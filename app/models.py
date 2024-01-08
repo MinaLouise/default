@@ -7,6 +7,7 @@ class Account(models.Model):
     phone_number = models.CharField(max_length = 10)
     user = models.OneToOneField(User, on_delete=models.CASCADE)
 <<<<<<< HEAD
+<<<<<<< HEAD
     # pfp = models.ImageField()
 
 
@@ -14,6 +15,10 @@ class Account(models.Model):
     profile_picture = models.ImageField(null=True, blank=True)
     
 >>>>>>> 11bf467e31904cc61940b0b21c761655a7efdccb
+=======
+    profile_picture = models.ImageField(null=True, blank=True)
+
+>>>>>>> 73fe66e364f4e7a91c6cd12cfded06fab801a093
 
 class Properties(models.Model):
     user_props = models.ForeignKey(Account, on_delete=models.CASCADE)
@@ -23,5 +28,5 @@ class Properties(models.Model):
     zip_code = models.IntegerField()
     size = models.IntegerField()
     available = models.BooleanField()
-    # photo = models.ImageField()
+
 
