@@ -1,39 +1,61 @@
 {% extends "base_index.html" %}
 {% load static %}
 {% block content %}
-    
+<style>
+    .crd-container {
+        width: 359px; /* Adjust the width as needed for a business card size */
+        padding: 10px;
+        margin: 50px auto; /* Adjust the top and bottom margin for centering */
+        background-color: #f0f0f0; /* Add your desired background color */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow */
+    }
+
+    .profile-table img{
+        width: 100%;
+        height: auto;
+    }
+
+    .userscard {
+        margin: 0;
+    }
+
+    .business-crd {
+        margin: auto; /* Center the card */
+    }
+</style>
+
                 {% if account is not None%}
-                <div class=" container mt-3 card-body ">
-                    <table class="profile-table  mt-3">
-                        <tbody class="card mt-3">
-                            <div class="business-crd">
-                                {% if account.profile_pic %}
-                                <td>
-                                    <img src="{{account.profile_pic.url}}" alt="failed to load">
-                                </td>
-                                {% else %}
-                                <td>
-                                    <img src="{% static "image/default.jpeg" %}" alt="default image">
-                                </td>
-                                {% endif %}
-                        
+                <div class="body crd-container ">
+                    <div class="crd-body">
+                        <div class="business-crd card-body">
+                            <table class="profile-table ">
+                                
+                                    {% if account.profile_pic %}
+                                    <td>
+                                        <img src="{{account.profile_pic.url}}" alt="failed to load">
+                                    </td>
+                                    {% else %}
+                                    <td>
+                                        <img src="{% static "image/default.jpeg" %}" alt="default image">
+                                    </td>
+                                    {% endif %}
                             
-                            
-                            <td>
-                                <div class="flipping-text" onclick="flipText(this)" onmouseout="resetText(this)">
-                                    <div class="userscard">
-                                    <h5 class="card-title">{{ account.name}}</h5>
-                                    <p class="card-text">{{ account.phone_number }}</p>
-                                    <p class="card-text">{{ request.user.email }}</p>
-                                    {% comment %} <p class="card-text">{{ account. }}</p> {% endcomment %}
-                                    </div>
-                                </div>
-                                <script src='{% static "main.js" %}'></script>
-                            </td>
+                                
+                                
+                                    <td>
+                                        <div class="flipping-text" onclick="flipText(this)" onmouseout="resetText(this)">
+                                            <div class="userscard">
+                                            <h5 class="card-title">{{ account.name}}</h5>
+                                            <p class="card-text">{{ account.phone_number }}</p>
+                                            <p class="card-text">{{ request.user.email }}</p>
+                                            {% comment %} <p class="card-text">{{ account. }}</p> {% endcomment %}
+                                            </div>
+                                        </div>
+                                        <script src='{% static "main.js" %}'></script>
+                                    </td>
+                            </table>
                         </div>
-                        </tbody>
-                            
-                    </table>
+                    </div>
                 </div>
                     
                 {% else %}
