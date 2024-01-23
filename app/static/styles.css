@@ -1,12 +1,35 @@
+html{
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
     /* background-color: #7c7c7e; */
-}
 
-body{
-    background-color: #ffffff;
+}
+.hiding{
+    position: absolute;left: 100000px;
+  }
+  
+.create_body{
+    margin: 0%;
+    overflow: hidden;
+}
+.create_div{
+background-color: rgb(255, 255, 255);
+text-align: center;
+margin-top: 50px;
+padding-top: 10px;
+padding-bottom: 10px;
+border-radius: 20px;
+box-shadow: 0 0 10px rgba(72, 56, 56, 0.892);
+border-width: 40%;
+}
+.body{
+    background-color: rgb(255, 225, 244);
     padding: 0;
     margin: 0;
     box-sizing: border-box;
@@ -34,20 +57,20 @@ body{
 .house{
     background-color: rgb(255, 255, 255);
     text-align: center;
-    margin-top: 30px;
+    margin-top: 50px;
     padding-top: 10px;
     padding-bottom: 10px;
     border-radius: 20px;
     box-shadow: 0 0 10px rgba(72, 56, 56, 0.892);
 }
 
-img {
+/* img {
     max-width: 200px; 
     height: auto;
-}
+} */
 
 .userscard{
-    padding-left: 20px;
+    padding-left: 10px;
 }
 
 .register_background{
@@ -77,119 +100,73 @@ img {
     top: 90%;
     left: 45%;
 }
+
 .register_to_login_btn{
     position: absolute;
     top: 80%;
     left: 23%;
 }
-body,
-html {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    background: #7abecc !important;
+
+.hide{
+    visibility: hidden;
 }
-.user_card {
-    width: 350px;
-    margin-top: auto;
-    margin-bottom: auto;
-    background: #74cfbf;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
+
+.house {
+    border: 1px solid #ccc;
     padding: 10px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    -moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    border-radius: 5px;
-
+    margin: 20px 20%;
+    text-align: center;
 }
 
-.form_container {
-    margin-top: 20px;
+.homepageimg {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
 }
 
-#form-title{
-    color: #fff;
-    
+.prop {
+    margin: 5px 0;
 }
 
-.login_btn {
-    width: 100%;
-    background: #33ccff !important;
-    color: white !important;
-}
-.login_btn:focus {
-    box-shadow: none !important;
-    outline: 0px !important;
-}
-.login_container {
-    padding: 0 2rem;
-}
-.input-group-text {
-    background: #f7ba5b !important;
-    color: white !important;
-    border: 0 !important;
-    border-radius: 0.25rem 0 0 0.25rem !important;
-}
-.input_user,
-.input_pass:focus {
-    box-shadow: none !important;
-    outline: 0px !important;
+.name{
+    font-style: oblique;
 }
 
-#messages{
-    background-color: grey;
-    color: #fff;
-    padding: 10px;
-    margin-top: 10px;
+.popup-container {
+    display: hidden;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 20px;
+    z-index: 9999;
+    width: 300px;
 }
 
-.user_card {
-			width: 350px;
-			margin-top: auto;
-			margin-bottom: auto;
-			background: #74cfbf;
-			position: relative;
-			display: flex;
-			justify-content: center;
-			flex-direction: column;
-			padding: 10px;
-			box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-			-webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-			-moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-			border-radius: 5px;
+.popup-container .btn-secondary {
+    float: right; 
+}
 
-		}
+.table{
+    text-align: center;
+}
 
-		.form_container {
-			margin-top: 20px;
-		}
+.profile-table{
+    width: 300px;
+    border: 1px solid #ccc;
+}
 
-		#form-title{
-			color: #fff;
-		}
-		.login_btn {
-			width: 100%;
-			background: #33ccff !important;
-			color: white !important;
-		}
-		.login_btn:focus {
-			box-shadow: none !important;
-			outline: 0px !important;
-		}
-		.login_container {
-			padding: 0 2rem;
-		}
-		.input-group-text {
-			background: #f7ba5b !important;
-			color: white !important;
-			border: 0 !important;
-			border-radius: 0.25rem 0 0 0.25rem !important;
-		}
-		.input_user,
-		.input_pass:focus {
-			box-shadow: none !important;
-			outline: 0px !important;
-		}
+.profile-table img{
+    max-width: 100%;
+    height: auto;
+}
+.flipping-text {
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.5s ease-in-out;
+  }
+  
